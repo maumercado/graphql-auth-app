@@ -15,6 +15,15 @@
         "sourceType": "module"
     },
     "rules": {
+        "react/prop-types": ["off"],
+        "react/jsx-no-bind": [
+            "error",
+            {
+                "ignoreRefs": false,
+                "allowArrowFunctions": true,
+                "allowBind": false
+            }
+        ],
         "array-bracket-spacing": "error",
         "arrow-spacing": "error",
         "comma-dangle": "error",
