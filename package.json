@@ -9,7 +9,12 @@
         "client": "node start-client",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": ["graphql", "react", "auth", "apollo"],
+    "keywords": [
+        "graphql",
+        "react",
+        "auth",
+        "apollo"
+    ],
     "author": "Mauricio Mercado",
     "license": "ISC",
     "devDependencies": {
@@ -21,6 +26,7 @@
     "dependencies": {
         "boom": "^7.1.1",
         "bunyan": "^1.8.12",
+        "handlebars": "^4.0.11",
         "hapi": "^17.1.1",
         "inert": "^5.0.1",
         "vision": "^5.2.0"
