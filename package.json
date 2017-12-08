@@ -1,0 +1,28 @@
+{
+    "name": "graphql-auth-app",
+    "version": "1.0.0",
+    "description": "Full stack app with react and graphql",
+    "main": "index.js",
+    "scripts": {
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "node index.js",
+        "client": "node start-client",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["graphql", "react", "auth", "apollo"],
+    "author": "Mauricio Mercado",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-eslint": "^8.0.3",
+        "concurrently": "^3.5.1",
+        "eslint": "^4.12.1",
+        "prettier-eslint": "^8.2.5"
+    },
+    "dependencies": {
+        "boom": "^7.1.1",
+        "bunyan": "^1.8.12",
+        "hapi": "^17.1.1",
+        "inert": "^5.0.1",
+        "vision": "^5.2.0"
+    }
+}
