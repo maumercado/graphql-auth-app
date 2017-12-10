@@ -5,6 +5,7 @@ const bunyanMiddleware = require("bunyan-middleware");
 const session = require("express-session");
 const passport = require("passport");
 const MongoStore = require("connect-mongo")(session);
+const cors = require("cors");
 const config = require("../../config");
 const log = require("./log");
 const routerV1 = require("../v1/routes");
@@ -12,7 +13,7 @@ const routerV1 = require("../v1/routes");
 const initServer = async () => {
     try {
         const server = aaWrapper(express());
-
+        server.use(cors());
         server.use(
             bunyanMiddleware({
                 headerName: "X-Request-Id",
