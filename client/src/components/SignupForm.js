@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
+import { compose } from "recompose";
+import { withRouter } from "react-router-dom";
 import signupUser from "../mutations/signupUser";
 import currentUser from "../queries/currentUser";
 import AuthForm from "./AuthForm";
@@ -9,6 +11,12 @@ class SignupForm extends Component {
         super(props);
 
         this.state = { errors: [] };
+    }
+
+    componentWillUpdate(nextProps) {
+        if (!this.props.data.user && nextProps.data.user) {
+            this.props.history.push("/dashboard");
+        }
     }
 
     onSubmit = async ({ email, password }) => {
@@ -34,4 +42,4 @@ class SignupForm extends Component {
     }
 }
 
-export default graphql(signupUser)(SignupForm);
+export default compose(withRouter, graphql(currentUser), graphql(signupUser))(SignupForm);

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
+import { compose } from "recompose";
+import { withRouter } from "react-router-dom";
 import loginUser from "../mutations/loginUser";
 import currentUser from "../queries/currentUser";
 import AuthForm from "./AuthForm";
@@ -10,6 +12,13 @@ class LoginForm extends Component {
 
         this.state = { errors: [] };
     }
+
+    componentWillUpdate(nextProps) {
+        if (!this.props.data.user && nextProps.data.user) {
+            this.props.history.push("/dashboard");
+        }
+    }
+
     onSubmit = async ({ email, password }) => {
         try {
             await this.props.mutate({
@@ -33,4 +42,4 @@ class LoginForm extends Component {
     }
 }
 
-export default graphql(loginUser)(LoginForm);
+export default compose(withRouter, graphql(currentUser), graphql(loginUser))(LoginForm);
