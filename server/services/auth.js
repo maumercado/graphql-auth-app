@@ -73,7 +73,7 @@ async function signup({ email, password, req }) {
             });
         });
     } catch (err) {
-        throw new Error(err);
+        throw err;
     }
 }
 

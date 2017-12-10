@@ -18,7 +18,7 @@ const mutation = new GraphQLObjectType({
                 try {
                     return await AuthService.signup({ email, password, req });
                 } catch (e) {
-                    throw new Error(e);
+                    throw e;
                 }
             }
         },
@@ -32,7 +32,7 @@ const mutation = new GraphQLObjectType({
                 try {
                     return await AuthService.login({ email, password, req });
                 } catch (err) {
-                    throw new Error(err);
+                    throw err;
                 }
             }
         },
