@@ -11,6 +11,7 @@
         "react-dom": "^16.2.0",
         "react-router-dom": "^4.2.2",
         "react-scripts": "1.0.17",
+        "recompose": "^0.26.0",
         "vision": "^5.2.0"
     },
     "devDependencies": {
@@ -18,7 +19,7 @@
         "eslint": "^4.12.1",
         "prettier-eslint": "^8.2.5"
     },
-    "proxy": "http://localhost:4000",
+    "proxy": "http://localhost:4000/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
