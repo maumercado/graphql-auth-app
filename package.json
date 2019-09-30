@@ -20,7 +20,7 @@
     "devDependencies": {
         "babel-eslint": "^8.0.3",
         "concurrently": "^3.5.1",
-        "eslint": "^4.12.1",
+        "eslint": "^6.5.0",
         "prettier-eslint": "^8.2.5"
     },
     "dependencies": {
