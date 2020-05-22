@@ -21,7 +21,7 @@
         "babel-eslint": "^8.0.3",
         "concurrently": "^3.5.1",
         "eslint": "^4.12.1",
-        "prettier-eslint": "^8.2.5"
+        "prettier-eslint": "^10.1.0"
     },
     "dependencies": {
         "bcrypt": "^1.0.3",
