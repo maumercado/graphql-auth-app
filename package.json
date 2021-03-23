@@ -28,7 +28,7 @@
         "boom": "^7.1.1",
         "bunyan": "^1.8.12",
         "bunyan-middleware": "^0.8.0",
-        "connect-mongo": "^2.0.0",
+        "connect-mongo": "^4.4.1",
         "cors": "^2.8.4",
         "express": "^4.16.2",
         "express-async-await": "^1.1.0",
